@@ -113,10 +113,7 @@ async def send_msg(bot, filename, caption):
                   resized_poster_task = fetch_image(poster_url)
                   resized_poster = await resized_poster_task
           filenames = filename.replace(" ", '-')
-          btn = [[InlineKeyboardButton('🌲 Get Files 🌲', url=f"https://telegram.me/{temp.U_NAME}?start=getfile-{filenames}")
-                 ],[
-                  InlineKeyboardButton('⌬ 𝗠𝗼𝘃𝗶𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗚𝗿𝗼𝘂𝗽 ⌬', url='https://t.me/+_-9trQQYYFczNTJl')
-          ]]
+          btn = [[InlineKeyboardButton('⌬ 𝗠𝗼𝘃𝗶𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗚𝗿𝗼𝘂𝗽 ⌬', url='https://t.me/+_-9trQQYYFczNTJl')]]
           if resized_poster:
               await bot.send_photo(chat_id=DEENDAYAL_MOVIE_UPDATE_CHANNEL, photo=resized_poster, caption=text, reply_markup=InlineKeyboardMarkup(btn))
           else:              
